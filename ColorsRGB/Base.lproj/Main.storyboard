@@ -44,6 +44,10 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="17B-sD-KYq">
                                         <rect key="frame" x="106" y="0.0" width="254" height="31"/>
+                                        <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
+                                        <connections>
+                                            <action selector="redValueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="ohZ-Cz-DYa"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
@@ -70,6 +74,10 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UGi-Sy-wDh">
                                         <rect key="frame" x="106" y="0.0" width="254" height="31"/>
+                                        <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                        <connections>
+                                            <action selector="greenValueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="f8j-5A-q8j"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
@@ -96,6 +104,9 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Drl-Rc-YGK">
                                         <rect key="frame" x="106" y="0.0" width="254" height="31"/>
+                                        <connections>
+                                            <action selector="blueValueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="tbk-4R-gkF"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
@@ -119,7 +130,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blueValueLabel" destination="ahI-Zr-psC" id="lkh-C4-Kx5"/>
+                        <outlet property="blueValueSlider" destination="Drl-Rc-YGK" id="J3a-YJ-hF0"/>
                         <outlet property="displayColorView" destination="tem-Gf-TLn" id="TvM-S8-ktz"/>
+                        <outlet property="greenValueLabel" destination="ays-c9-OlX" id="dLG-6n-8t5"/>
+                        <outlet property="greenValueSlider" destination="UGi-Sy-wDh" id="HKf-x2-c2P"/>
+                        <outlet property="redValueLabel" destination="r6s-2X-q4F" id="7lT-7s-qVy"/>
+                        <outlet property="redValueSlider" destination="17B-sD-KYq" id="u75-Lg-cIj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -133,6 +150,12 @@
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
